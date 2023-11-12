@@ -1,6 +1,8 @@
 
 const apiKey = '512c11fc8f1541a35bd7f1445c1e2b18';
+
 const url = 'https://api.openweathermap.org/data/2.5/weather';
+
 const getWeather = async (city) => {
     try {
         const options = {
@@ -17,7 +19,9 @@ const getWeather = async (city) => {
         console.error(error);
     }
 }
+
 const weatherContnet = document.getElementById('weatherContnet');
+
 const renderWeatherCard = (data) => {
     weatherContnet.innerHTML += `
     <div class="col-md-5 my-3">
@@ -38,7 +42,7 @@ const renderWeatherCard = (data) => {
                 <p class="fs-4">${data.main.temp}°C</p>
             </div>
         </div>
-    </div>
-`;
+    </div>`;
 };
+
 export { getWeather }
